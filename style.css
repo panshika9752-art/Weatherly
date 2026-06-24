@@ -1,0 +1,29 @@
+body{
+    background: url('images/clear1.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+.weather-container{
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+.info-card img{
+    width: 40px;
+    height: 40px;
+}
+.container > h1,
+.container > p {
+  animation: fadeInDown 0.6s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

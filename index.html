@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container" align="center">
+      <h1 class="mt-4 display-6 fw-bold text-white">RapidForecast</h1>
+      <p class="fst-italic text-white fw-bold">
+        Real-time forecasts, accurate and reliable — wherever you are
+      </p>
+      <div class="weather-container mx-auto shadow col-md-8">
+        <div class="input-group mb-1">
+          <input
+            type="text"
+            id="input-box"
+            class="form-control"
+            placeholder="Enter city name"
+            autocomplete="off"
+          />
+          <button class="btn btn-outline-secondary" id="search-btn" type="submit">
+            <i class="fa-solid fa-magnifying-glass" title="Search"></i>
+          </button>
+        </div>
+        <div id="error-message" class="alert alert-danger d-none" role="alert">
+          city not found,please Enter a valid city name
+        </div>
+
+        <div class="weather-body d-none" id="weather-body">
+          <div class="mb-3">
+            <h3 id="city-name">Bhopal, IN</h3>
+            <p id="date">Monday, 1 January 2024</p>
+          </div>
+          <div class="mb-3">
+            <h1 id="temp"></h1>
+            <p id="min-max-temperature">Min: 20°C | Max: 30°C</p>
+            <p id="weather"></p>
+
+          </div>
+
+          <div class="row text-center">
+            <!-- Additional weather information can be added here -->
+             <div class="col-md-4">
+             <div class="card info-card">
+                <div class="card-body">
+                   <img src="images/icons-humidity.png" alt="Humidity" />
+                  <p class="mt-2" id="humidity">Humidity: 60%</p>
+                </div>
+             </div>
+          </div>
+          <div class="col-md-4">
+             <div class="card info-card">
+                <div class="card-body">
+                   <img src="images/icons-gauga.png" alt="Gauga" />
+                  <p class="mt-2" id="pressure">Pressure: 1013 hPa</p>
+                </div>
+             </div>
+          </div>
+          <div class="col-md-4">
+             <div class="card info-card">
+                <div class="card-body">
+                   <img src="images/icones-wind.jpg" alt="Wind Speed" />
+                  <p class="mt-2" id="wind">WindSpeed: 8 km/h</p>
+                </div>
+             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+    <script src="script.js"></script>
+  </body>
+</html>
